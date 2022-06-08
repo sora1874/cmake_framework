@@ -1,0 +1,8 @@
+sdk_generate_library()
+sdk_library_add_sources(platform/bflb_platform.c)
+sdk_library_add_sources(platform/syscalls.c)
+sdk_library_add_sources(platform/vsnprintf.c)
+sdk_add_include_directories(platform)
+
+sdk_add_compile_definitions(CONFIG_BL_FLASH_INIT CONFIG_BL_SHOW_INFO)
+

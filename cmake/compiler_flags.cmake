@@ -14,7 +14,7 @@ sdk_add_compile_options(
 -Wignored-qualifiers
 -Wno-error=unused-variable
 -Wno-error=deprecated-declarations
-# -Wno-error=absolute-value
+-Wno-error=absolute-value
 -Wno-error=type-limits
 -Wno-error=cpp -Wextra
 -Wno-unused-parameter
@@ -23,8 +23,8 @@ sdk_add_compile_options(
 -MMD
 $<$<COMPILE_LANGUAGE:C>:-Wno-old-style-declaration>
 $<$<COMPILE_LANGUAGE:C>:-Wno-override-init>
-# $<$<COMPILE_LANGUAGE:C>:-Wno-enum-conversion>
-# $<$<COMPILE_LANGUAGE:C>:-Wno-cast-function-type>
+$<$<COMPILE_LANGUAGE:C>:-Wno-enum-conversion>
+$<$<COMPILE_LANGUAGE:C>:-Wno-cast-function-type>
 $<$<COMPILE_LANGUAGE:C>:-std=gnu99>
 $<$<COMPILE_LANGUAGE:CXX>:-std=c++11>
 $<$<COMPILE_LANGUAGE:CXX>:-nostdlib>
@@ -33,13 +33,14 @@ $<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>
 )
 
 sdk_add_link_options(
-# -Wl,--cref
-# -Wl,--gc-sections
-# -nostartfiles
-# -fms-extensions
-# -ffunction-sections
-# -fdata-sections
-# --specs=nano.specs
+-Wl,--cref
+-Wl,--gc-sections
+-nostartfiles
+-fms-extensions
+-ffunction-sections
+-fdata-sections
+--specs=nano.specs
+-uboard_init
 )
 
 sdk_add_link_libraries(c m)
