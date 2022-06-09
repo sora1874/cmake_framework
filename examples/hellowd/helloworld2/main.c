@@ -28,22 +28,12 @@ int main(void)
     bflb_platform_init(0);
 
     for (uint8_t i = 0; i < 10; i++) {
-        MSG("hello world!1111111111111111111111111111111\r\n");
+        MSG("hello world!\r\n");
         bflb_platform_delay_ms(200);
     }
 
     BL_CASE_SUCCESS;
     while (1) {
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
-        bflb_platform_delay_ms(100);
         bflb_platform_delay_ms(100);
     }
 }
